@@ -26,7 +26,7 @@ const weatherError = ref(null)
 
 onMounted(async () => {
   try {
-    const res = await fetch("http://api.weatherstack.com/current?access_key=ad613791bc9bf2d0f25e13e412ffa876&query=Pretoria&units=m")
+    const res = await fetch("https://api.weatherstack.com/current?access_key=ad613791bc9bf2d0f25e13e412ffa876&query=Pretoria&units=m")
     weather.value = await res.json()
   } catch (err) {
     weatherError.value = err
